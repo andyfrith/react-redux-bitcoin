@@ -18,11 +18,11 @@ class App extends Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
-        <Header />
+      <main className="App">
+        <Header title="Bitcoin Monitor" />
         <BitcoinMonitor />
         {children}
-      </div>
+      </main>
     );
   }
 }

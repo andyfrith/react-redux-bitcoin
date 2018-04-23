@@ -9,7 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import configureStore from './store/configureStore';
 import Root from './containers/Root';
 import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import './styles/index.css';
 
 // RENDER ROUTER
 const store = configureStore();
