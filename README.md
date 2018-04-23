@@ -1,6 +1,6 @@
-# React Bitcoin Monitor
+# React Redux Bitcoin
 
-An app that monitors changes in the _Bitcoin Price Index (BPI)_.
+This demo is a React Redux application that provides current and historical _Bitcoin Price Index (BPI)_ data.
 
 The BPI will be shown for the _USD_ currency.
 
