@@ -65,16 +65,16 @@ npm -v
 
 Follow the following steps to get development environment running.
 
-* Clone _'react-bitcoin-monitor'_ repository from GitHub
+* Clone _'react-redux-bitcoin'_ repository from GitHub
 
   ```bash
-  git clone git@github.com:andyfrith/react-bitcoin-monitor.git
+  git clone git@github.com:andyfrith/react-redux-bitcoin.git
   ```
 
 * Install node modules
 
   ```bash
-  cd react-bitcoin-monitor
+  cd react-redux-bitcoin
   yarn install
   ```
 
@@ -88,8 +88,9 @@ Follow the following steps to get development environment running.
 
 ---
 
-## Author
+## Links
 
-* **Andy Frith** - _Initial work_ - [andyfrith](https://github.com/andyfrith)
+* [**Portfolio**](http://goodapplemedia.com): Visit portfolio site at http://goodapplemedia.com.
+* [**Andy Frith**](http://andyfrith.com): Learn more about the site developer at http://andyfrith.com.
 
 [coindesk bitcoin price index api]: https://www.coindesk.com/api/
