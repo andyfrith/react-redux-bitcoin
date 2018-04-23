@@ -18,7 +18,7 @@ render(
   <Router>
     <Root store={store} />
   </Router>,
-  document.getElementById('root')
+  document.getElementById( 'root' ),
 );
 
 registerServiceWorker();
