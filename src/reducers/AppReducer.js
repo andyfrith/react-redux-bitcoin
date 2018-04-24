@@ -4,12 +4,14 @@ import { combineReducers } from 'redux';
 
 // IMPORT REDUCERS
 
-import { GetCurrentPriceReducer } from './GetCurrentPriceReducer';
-import { GetPricesReducer } from './GetPricesReducer';
+import GetCurrentPriceReducer from './GetCurrentPriceReducer';
+import GetPricesReducer from './GetPricesReducer';
 
 // EXPORT REDUCER
 
-export const AppReducer = combineReducers({
+const AppReducer = combineReducers( {
   currentPrice: GetCurrentPriceReducer,
-  prices: GetPricesReducer
-});
+  prices: GetPricesReducer,
+} );
+
+export default AppReducer;

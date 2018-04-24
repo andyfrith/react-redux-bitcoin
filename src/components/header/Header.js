@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 
 // COMPONENT
 
-export const Header = ({ title }) => (
+const Header = ( { title } ) => (
   <nav
     className="header navbar navbar-dark bg-dark"
-    style={{ overflowX: 'hidden' }}>
+    style={{ overflowX: 'hidden' }}
+  >
     <div className="text-center mx-auto">
       <div className="">
         <i
@@ -22,9 +23,11 @@ export const Header = ({ title }) => (
 );
 
 Header.defaultProps = {
-  title: 'App'
+  title: 'App',
 };
 
 Header.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 };
+
+export default Header;

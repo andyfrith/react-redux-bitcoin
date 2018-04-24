@@ -11,10 +11,10 @@ export const GET_CURRENT_PRICE_REJECTED = 'GET_CURRENT_PRICE_REJECTED';
 
 // ACTIONS GENERATORS
 
-const getCurrentPriceAction = () => ({
+const getCurrentPriceAction = () => ( {
   type: GET_CURRENT_PRICE,
-  payload: getCurrentPrice()
-});
+  payload: getCurrentPrice(),
+} );
 
 // GET PRICES ACTION NAMES
 
@@ -25,14 +25,14 @@ export const GET_PRICES_REJECTED = 'GET_PRICES_REJECTED';
 
 // ACTIONS GENERATORS
 
-const getPricesAction = (startDate, endDate) => ({
+const getPricesAction = ( startDate, endDate ) => ( {
   type: GET_PRICES,
-  payload: getPrices(startDate, endDate)
-});
+  payload: getPrices( startDate, endDate ),
+} );
 
 // EXPORT ACTIONS
 
 export {
   getCurrentPriceAction as getCurrentPrice,
-  getPricesAction as getPrices
+  getPricesAction as getPrices,
 };

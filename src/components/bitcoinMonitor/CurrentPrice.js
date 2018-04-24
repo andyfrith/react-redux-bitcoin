@@ -6,18 +6,16 @@ import moment from 'moment';
 
 // COMPONENT
 
-const CurrentPrice = ({ currentPrice }) => {
-  const usd = () => {
-    return currentPrice && currentPrice.bpi && currentPrice.bpi.USD
-      ? currentPrice.bpi.USD.symbol + currentPrice.bpi.USD.rate_float
-      : '';
-  };
+const CurrentPrice = ( { currentPrice } ) => {
+  const usd = () =>
+    ( currentPrice && currentPrice.bpi && currentPrice.bpi.USD
+      ? `$${ currentPrice.bpi.USD.rate_float }`
+      : '' );
 
-  const lastUpdated = () => {
-    return currentPrice && currentPrice.time && currentPrice.time.updatedISO
-      ? moment(currentPrice.time.updatedISO).format('YYYY-MM-DD, h:mm:ss a')
-      : '';
-  };
+  const lastUpdated = () =>
+    ( currentPrice && currentPrice.time && currentPrice.time.updatedISO
+      ? moment( currentPrice.time.updatedISO ).format( 'YYYY-MM-DD, h:mm:ss a' )
+      : '' );
 
   return (
     <div className="current-price">
@@ -28,24 +26,8 @@ const CurrentPrice = ({ currentPrice }) => {
   );
 };
 
-// CurrentPrice.defaultProps = {
-//   currentPrice: {
-//     time: {
-//       updatedISO: '2018-04-22T17:17:00+00:00'
-//     },
-//     bpi: {
-//       USD: {
-//         code: 'USD',
-//         symbol: '$',
-//         rate: '1,000,000.00',
-//         description: 'United States Dollar',
-//         rate_float: 1000000.0
-//       }
-//     }
-//   }
-// };
 CurrentPrice.propTypes = {
-  currentPrice: PropTypes.object
+  currentPrice: PropTypes.object.isRequired,
 };
 
-export { CurrentPrice };
+export default CurrentPrice;

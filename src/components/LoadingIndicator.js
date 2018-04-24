@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 // COMPONENT
 
-const LoadingIndicator = (props) => (
+const LoadingIndicator = props => (
   <div>
     {props.busy && (
       <div
@@ -15,8 +15,9 @@ const LoadingIndicator = (props) => (
           textAlign: 'center',
           color: '#26A69A',
           position: 'absolute',
-          transform: 'translate(-50%, 0)'
-        }}>
+          transform: 'translate(-50%, 0)',
+        }}
+      >
         <i className="fa fa-spinner fa-spin fa-4x fa-fw" />
       </div>
     )}
@@ -24,7 +25,7 @@ const LoadingIndicator = (props) => (
 );
 
 LoadingIndicator.propTypes = {
-  busy: PropTypes.bool
+  busy: PropTypes.bool.isRequired,
 };
 
-export { LoadingIndicator };
+export default LoadingIndicator;

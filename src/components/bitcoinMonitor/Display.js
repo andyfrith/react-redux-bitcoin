@@ -5,16 +5,18 @@ import PropTypes from 'prop-types';
 
 // IMPORT PROJECT REFERENCES
 
-import { CurrentPrice } from './CurrentPrice';
-import { PriceHistory } from './PriceHistory';
+import CurrentPrice from './CurrentPrice';
+import PriceHistory from './PriceHistory';
 
 // COMPONENT
 
-const Display = ({ currentPrice, fetching, error, prices }) => {
-  if (fetching) {
+const Display = ( {
+  currentPrice, fetching, error, prices,
+} ) => {
+  if ( fetching ) {
     return <div>Loading ...</div>;
   }
-  if (error) {
+  if ( error ) {
     return <div>Error: {error}! Please try again.</div>;
   }
   return (
@@ -26,14 +28,14 @@ const Display = ({ currentPrice, fetching, error, prices }) => {
 };
 
 Display.defaultProps = {
-  currentPrice: {}
+  error: '',
 };
 
 Display.propTypes = {
-  currentPrice: PropTypes.object,
-  fetching: PropTypes.bool,
+  currentPrice: PropTypes.object.isRequired,
+  fetching: PropTypes.bool.isRequired,
   error: PropTypes.string,
-  prices: PropTypes.object
+  prices: PropTypes.object.isRequired,
 };
 
-export { Display };
+export default Display;

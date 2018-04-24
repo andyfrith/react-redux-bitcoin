@@ -3,7 +3,7 @@
 import {
   GET_PRICES_PENDING,
   GET_PRICES_FULFILLED,
-  GET_PRICES_REJECTED
+  GET_PRICES_REJECTED,
 } from '../actions';
 
 // INITIALIZE STATE
@@ -12,20 +12,20 @@ const initialState = {
   data: {},
   fetching: false,
   fetched: false,
-  failed: false
+  failed: false,
 };
 
 // REDUCER
 
-export const GetPricesReducer = (state = initialState, action) => {
-  switch (action.type) {
+const GetPricesReducer = ( state = initialState, action ) => {
+  switch ( action.type ) {
     case GET_PRICES_PENDING:
       return {
         ...state,
         data: {},
         fetching: true,
         fetched: false,
-        failed: false
+        failed: false,
       };
     case GET_PRICES_FULFILLED:
       return {
@@ -33,7 +33,7 @@ export const GetPricesReducer = (state = initialState, action) => {
         data: action.payload,
         fetching: false,
         fetched: true,
-        failed: false
+        failed: false,
       };
     case GET_PRICES_REJECTED:
       return {
@@ -41,9 +41,11 @@ export const GetPricesReducer = (state = initialState, action) => {
         data: {},
         fetching: false,
         fetched: false,
-        failed: true
+        failed: true,
       };
     default:
       return state;
   }
 };
+
+export default GetPricesReducer;
